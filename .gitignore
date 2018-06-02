@@ -5,5 +5,3 @@ node_modules
 *.map
 _icons.scss
 package-lock.json
-
-docs
