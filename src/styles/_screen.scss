@@ -1,6 +1,18 @@
  @media screen and (max-width: $bp-small) {
+    .editable-title {
+      margin-left: -30px;
+    }
     .article-jumbotron {
       min-height: 600px;
+    }
+    .article-body {
+      flex-direction: column-reverse;
+
+      .introduction {
+        h4 {
+          max-height: 24px;
+        }
+      }
     }
     .grid {
       padding: 0 30px;
@@ -9,10 +21,16 @@
         &--hide-bp-small {
           display: none;
         }   
+        &--col-8-small {
+          width: 100%;
+        }   
       }
     }
     h1 {
       font-size: 48px;
+    }
+    blockquote {
+      font-size: 28px;
     }
     h2 {
       font-size: 32px;
@@ -22,12 +40,9 @@
       font-size: 32px;
     }
     h4 {
-      font-size: 18px;
+      font-size: 14px;
     }
     p {
       font-size: 17px;
-    }
-    span {
-      font-size: 13px;
     }
   }

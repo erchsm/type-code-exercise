@@ -56,11 +56,11 @@ table {
   src: url("../fonts/Copernicus/Copernicus-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Copernicus/Copernicus-Heavy.woff2") format("woff2"), url("../fonts/Copernicus/Copernicus-Heavy.woff") format("woff"), url("../fonts/Copernicus/Copernicus-Heavy.ttf") format("truetype"), url("../fonts/Copernicus/Copernicus-Heavy.svg#codropsicons") format("svg"); }
 
 @font-face {
-  font-family: 'Palantino';
+  font-family: 'Palatino';
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/Palantino/Palantino-Roman.eot");
-  src: url("../fonts/Palantino/Palantino-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/Palantino/Palantino-Roman.woff2") format("woff2"), url("../fonts/Palantino/Palantino-Roman.woff") format("woff"), url("../fonts/Palantino/Palantino-Roman.ttf") format("truetype"), url("../fonts/Palantino/Palantino-Roman.svg#codropsicons") format("svg"); }
+  src: url("../fonts/Palatino/Palatino-Roman.eot");
+  src: url("../fonts/Palatino/Palatino-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/Palatino/Palatino-Roman.woff2") format("woff2"), url("../fonts/Palatino/Palatino-Roman.woff") format("woff"), url("../fonts/Palatino/Palatino-Roman.ttf") format("truetype"), url("../fonts/Palatino/Palatino-Roman.svg#codropsicons") format("svg"); }
 
 @font-face {
   font-family: 'Futura Std';
@@ -135,7 +135,7 @@ table {
       width: 62.5%; }
 
 body {
-  font-family: "Palantino", serif;
+  font-family: "Palatino", serif;
   color: #1A1A1A; }
 
 h1 {
@@ -166,7 +166,7 @@ h4 {
 
 p {
   color: #333333;
-  font-family: "Palantino", serif;
+  font-family: "Palatino", serif;
   font-size: 19px;
   margin-bottom: 19px;
   line-height: 1.5;
@@ -210,25 +210,34 @@ body {
   -webkit-overflow-scrolling: touch; }
 
 @media screen and (max-width: 600px) {
+  .editable-title {
+    margin-left: -30px; }
   .article-jumbotron {
     min-height: 600px; }
+  .article-body {
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+    .article-body .introduction h4 {
+      max-height: 24px; }
   .grid {
     padding: 0 30px; }
     .grid__item--hide-bp-small {
       display: none; }
+    .grid__item--col-8-small {
+      width: 100%; }
   h1 {
     font-size: 48px; }
+  blockquote {
+    font-size: 28px; }
   h2 {
     font-size: 32px;
     letter-spacing: 0.006em; }
   h3 {
     font-size: 32px; }
   h4 {
-    font-size: 18px; }
+    font-size: 14px; }
   p {
-    font-size: 17px; }
-  span {
-    font-size: 13px; } }
+    font-size: 17px; } }
 
 /* Modules */
 .article-body {
@@ -246,6 +255,10 @@ body {
     margin-left: 6px;
     font-size: 15px;
     letter-spacing: 0.006em; }
+  .article-body .introduction h4 {
+    float: left;
+    line-height: 28px;
+    margin-right: 12px; }
 
 .article-button {
   display: -ms-flexbox;
@@ -281,7 +294,7 @@ body {
     display: none; }
 
 .article-header {
-  position: fixed;
+  position: absolute;
   height: 90px;
   width: 100%;
   -ms-flex-pack: end;
@@ -319,7 +332,7 @@ body {
   -ms-flex-pack: end;
   justify-content: flex-end;
   margin-left: -34px;
-  height: 219px; }
+  height: 360px; }
   .editable-title__controls {
     display: -ms-flexbox;
     display: flex;
@@ -341,7 +354,7 @@ body {
     background-color: white;
     padding: 12px; }
   .editable-title__slug {
-    margin: 12px 0 0 12px; }
+    margin: 12px 0 0 9px; }
     .editable-title__slug h4 {
       display: inline;
       font-family: "Futura Std", sans-serif;
@@ -350,6 +363,7 @@ body {
       text-transform: lowercase;
       color: #B2B2B2; }
       .editable-title__slug h4 ~ h4 {
+        margin-left: 3px;
         color: #666666; }
   .editable-title h1 span {
     background-color: white;

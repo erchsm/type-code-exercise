@@ -5,9 +5,6 @@ import classNames from "classnames";
 
 export default class ArticleButton extends Component {
 
-	static propTypes = {
-	}
-
 	constructor() {
 		super();
 	}

@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: flex-end;
 	margin-left: -34px;
-	height: 219px;
+	height: 360px;
 
 	&__controls {
 		display: flex;
@@ -26,7 +26,7 @@
 	}
 
 	&__slug {
-		margin: 12px 0 0 12px;
+		margin: 12px 0 0 9px;
 
 		h4 {
 			display: inline;
@@ -37,6 +37,7 @@
 			color: $brand-grey-light;
 
 			~ h4 {
+				margin-left: 3px;
 				color: $brand-grey;				
 			}
 		}

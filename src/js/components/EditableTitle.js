@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import classNames from "classnames";
 
 import ArticleButton from './ArticleButton';
@@ -21,27 +20,34 @@ export default class EditableTitle extends Component {
 	}
 
 	componentDidMount = () => {
-		// fetch('//endpoint.com')
+
+		// Fetch cached state from Local Storage. TODO replace with backend call.
+		const cache = localStorage.getItem('cachedState');
+	    
+	    if (cache) {
+			const cachedState = JSON.parse(cache);
+
+			this.setState({
+				titleText: cachedState.editingTitleText,
+				editingTitleText: cachedState.editingTitleText
+			});
+	    }
+
+		// How I would RESTfully fetch data from backend
+		// -----------------------------
+		// fetch('//some-endpoint.com')
 		// 	.then(response => {
 		// 		return response.json();
 		// 	})
 		// 	.then(data => {
 		// 		this.setState({ 
+		// 			titleText: titleText,
+		// 			editingTitleText: editingTitleText
 		// 		})
 		// 	})
 		// 	.catch(error => {
 		// 		console.error(error);
 		// 	});
-		const cache = localStorage.getItem('data');
-	    
-	    if (cache) {
-			console.log(cache);
-
-			this.setState({
-				titleText: JSON.parse(cache).editingTitleText,
-				editingTitleText: JSON.parse(cache).editingTitleText
-			});
-	    }
 	}
 
 	handleEditingOnChange = (event) => {
@@ -71,7 +77,26 @@ export default class EditableTitle extends Component {
 			isEditing: false,
 			titleText: this.state.editingTitleText
 		});
-	    localStorage.setItem('data', JSON.stringify(this.state));
+
+		// Post Data to Local Storage to Persist. TODO replace with backend call.
+	    localStorage.setItem('cachedState', JSON.stringify(this.state));
+
+
+		// How I would RESTfully post data to a backend
+		// -----------------------------
+		// fetch('//some-endpoint.com', {method: 'post', body: JSON.stringify(this.state)})
+		// 	.then(response => {
+		// 		return response.json();
+		// 	})
+		// 	.then(data => {
+		// 		this.setState({ 
+		// 			titleText: titleText,
+		// 			editingTitleText: editingTitleText
+		// 		})
+		// 	})
+		// 	.catch(error => {
+		// 		console.error(error);
+		// 	});
 	}
 
 	clickCancel = () => {
@@ -92,18 +117,22 @@ export default class EditableTitle extends Component {
 			'editable-title--is-editing': isEditing
 		});	
 
-		const title = this.splitText(titleText).map((item, index) =>
+		const titleSplit = this.splitText(titleText);
+
+		const title = titleSplit.map((item, index) =>
 			<span key={index}>
 				{item}
-				{(index != this.splitText(titleText).length - 1) ? ' ' : null}
+				{(index != titleSplit.length - 1) ? ' ' : null}
 			</span>
 		);
 
+		const slugSplit = this.splitText(editingTitleText);
+
 		// the regex below removes punctuation!
-		const slug = this.splitText(editingTitleText).map((item, index) =>
+		const slug = slugSplit.map((item, index) =>
 			<span key={index}>
 				{item.toLowerCase().replace(/[.,?\/#!$%\^&\*;:{}=\-_`~()]/g,'').replace(/\s{2,}/g," ")}
-				{(index != this.splitText(editingTitleText).length - 1) ? '-' : ''}
+				{(index != slugSplit.length - 1) ? '-' : ''}
 			</span>
 		);
 
@@ -125,7 +154,7 @@ export default class EditableTitle extends Component {
 					<div className="editable-title__editor">
 						<input ref='editingTitleText' type="text" value={editingTitleText} onChange={this.handleEditingOnChange} onKeyPress={this.handleEditingKeyPress}/>
 						<div className="editable-title__slug">
-							<h4>slug: </h4><h4>{slug}</h4>
+							<h4>slug:</h4><h4>{slug}</h4>
 						</div>
 					</div>
 				</div>

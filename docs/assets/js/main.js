@@ -22407,7 +22407,7 @@ App.propTypes = {};
 exports.default = App;
 
 },{"./ArticleBody":203,"./ArticleHeader":205,"./ArticleJumbotron":206,"react":199}],203:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -22415,15 +22415,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsCssTransitionGroup = require("react-addons-css-transition-group");
-
-var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
-
-var _classnames = require("classnames");
+var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -22445,10 +22441,8 @@ var ArticleBody = function (_Component) {
 	}
 
 	_createClass(ArticleBody, [{
-		key: "render",
+		key: 'render',
 		value: function render() {
-			var large = this.props.large;
-
 
 			var classnames = (0, _classnames2.default)({
 				'grid': true,
@@ -22456,85 +22450,94 @@ var ArticleBody = function (_Component) {
 			});
 
 			return _react2.default.createElement(
-				"section",
+				'section',
 				{ className: classnames },
-				_react2.default.createElement("div", { className: "grid__item grid__item--col-1 grid__item--hide-bp-small" }),
+				_react2.default.createElement('div', { className: 'grid__item grid__item--col-1 grid__item--hide-bp-small' }),
 				_react2.default.createElement(
-					"div",
-					{ className: "grid__item grid__item--col-2 metadata" },
-					_react2.default.createElement("hr", null),
+					'div',
+					{ className: 'grid__item grid__item--col-2 grid__item--col-8-small metadata' },
+					_react2.default.createElement('hr', null),
 					_react2.default.createElement(
-						"div",
-						{ className: "metadata__item" },
+						'div',
+						{ className: 'metadata__item' },
 						_react2.default.createElement(
-							"h4",
+							'h4',
 							null,
-							"By"
+							'By'
 						),
 						_react2.default.createElement(
-							"h4",
-							{ className: "metadata__author" },
-							"Bob Law"
+							'h4',
+							{ className: 'metadata__author' },
+							'Bob Law'
 						)
 					),
-					_react2.default.createElement("hr", null),
+					_react2.default.createElement('hr', null),
 					_react2.default.createElement(
-						"div",
-						{ className: "metadata__item" },
+						'div',
+						{ className: 'metadata__item' },
 						_react2.default.createElement(
-							"h4",
+							'h4',
 							null,
-							"August 6, 2015"
+							'August 6, 2015'
 						)
 					),
-					_react2.default.createElement("hr", null),
+					_react2.default.createElement('hr', null),
 					_react2.default.createElement(
-						"div",
-						{ className: "metadata__item" },
+						'div',
+						{ className: 'metadata__item' },
 						_react2.default.createElement(
-							"h4",
-							{ className: "metadata__tag" },
-							"#environment"
+							'h4',
+							{ className: 'metadata__tag' },
+							'#environment'
 						),
 						_react2.default.createElement(
-							"h4",
-							{ className: "metadata__tag" },
-							"#swift"
+							'h4',
+							{ className: 'metadata__tag' },
+							'#swift'
 						),
 						_react2.default.createElement(
-							"h4",
-							{ className: "metadata__tag" },
-							"#fungus"
+							'h4',
+							{ className: 'metadata__tag' },
+							'#fungus'
 						)
 					)
 				),
 				_react2.default.createElement(
-					"div",
-					{ className: "grid__item grid__item--col-5" },
+					'div',
+					{ className: 'grid__item grid__item--col-5 grid__item--col-8-small' },
 					_react2.default.createElement(
-						"p",
-						null,
-						"Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere."
+						'div',
+						{ className: 'introduction' },
+						_react2.default.createElement(
+							'h4',
+							null,
+							'New York, NY.'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.'
+						)
 					),
 					_react2.default.createElement(
-						"p",
+						'p',
 						null,
-						"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim."
+						'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim.'
 					),
 					_react2.default.createElement(
-						"blockquote",
+						'blockquote',
 						null,
-						"Looking at it now, last December. We were built to fall apart. Then fall back together."
+						'Looking at it now, last December. We were built to fall apart. Then fall back together.'
 					),
 					_react2.default.createElement(
-						"p",
+						'p',
 						null,
-						"Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis nulla vitae urna tincidunt."
+						'Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis nulla vitae urna tincidunt.'
 					),
 					_react2.default.createElement(
-						"p",
+						'p',
 						null,
-						"Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor. Mauris vel neque sit amet nunc gravida congue."
+						'Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor. Mauris vel neque sit amet nunc gravida congue.'
 					)
 				)
 			);
@@ -22544,12 +22547,9 @@ var ArticleBody = function (_Component) {
 	return ArticleBody;
 }(_react.Component);
 
-ArticleBody.propTypes = {
-	large: _react.PropTypes.bool
-};
 exports.default = ArticleBody;
 
-},{"classnames":2,"react":199,"react-addons-css-transition-group":41}],204:[function(require,module,exports){
+},{"classnames":2,"react":199}],204:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -22614,11 +22614,10 @@ var ArticleButton = function (_Component) {
 	return ArticleButton;
 }(_react.Component);
 
-ArticleButton.propTypes = {};
 exports.default = ArticleButton;
 
 },{"classnames":2,"react":199,"react-addons-css-transition-group":41}],205:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -22626,15 +22625,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsCssTransitionGroup = require("react-addons-css-transition-group");
-
-var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
-
-var _classnames = require("classnames");
+var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -22656,7 +22651,7 @@ var ArticleHeader = function (_Component) {
 	}
 
 	_createClass(ArticleHeader, [{
-		key: "render",
+		key: 'render',
 		value: function render() {
 			var charts = this.props.charts;
 
@@ -22667,13 +22662,13 @@ var ArticleHeader = function (_Component) {
 			});
 
 			return _react2.default.createElement(
-				"header",
+				'header',
 				{ className: classnames },
 				_react2.default.createElement(
-					"div",
-					{ className: "grid__item grid__item--col-2" },
-					_react2.default.createElement("i", { className: "iconcss icon-logo" }),
-					_react2.default.createElement("i", { className: "iconcss icon-hamburger" })
+					'div',
+					{ className: 'grid__item grid__item--col-2' },
+					_react2.default.createElement('i', { className: 'iconcss icon-logo' }),
+					_react2.default.createElement('i', { className: 'iconcss icon-hamburger' })
 				)
 			);
 		}
@@ -22682,13 +22677,10 @@ var ArticleHeader = function (_Component) {
 	return ArticleHeader;
 }(_react.Component);
 
-ArticleHeader.propTypes = {
-	charts: _react.PropTypes.array
-};
 exports.default = ArticleHeader;
 
-},{"classnames":2,"react":199,"react-addons-css-transition-group":41}],206:[function(require,module,exports){
-"use strict";
+},{"classnames":2,"react":199}],206:[function(require,module,exports){
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -22696,23 +22688,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsCssTransitionGroup = require("react-addons-css-transition-group");
-
-var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
-
-var _classnames = require("classnames");
+var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _ArticleButton = require("./ArticleButton");
+var _ArticleButton = require('./ArticleButton');
 
 var _ArticleButton2 = _interopRequireDefault(_ArticleButton);
 
-var _EditableTitle = require("./EditableTitle");
+var _EditableTitle = require('./EditableTitle');
 
 var _EditableTitle2 = _interopRequireDefault(_EditableTitle);
 
@@ -22732,26 +22720,12 @@ var ArticleJumbotron = function (_Component) {
 
 		var _this = _possibleConstructorReturn(this, (ArticleJumbotron.__proto__ || Object.getPrototypeOf(ArticleJumbotron)).call(this));
 
-		_this.componentDidMount = function () {
-			// fetch('//endpoint.com')
-			// 	.then(response => {
-			// 		return response.json();
-			// 	})
-			// 	.then(data => {
-			// 		this.setState({ 
-			// 		})
-			// 	})
-			// 	.catch(error => {
-			// 		console.error(error);
-			// 	});
-		};
-
 		_this.state = {};
 		return _this;
 	}
 
 	_createClass(ArticleJumbotron, [{
-		key: "render",
+		key: 'render',
 		value: function render() {
 			var classnames = (0, _classnames2.default)({
 				'grid': true,
@@ -22759,12 +22733,12 @@ var ArticleJumbotron = function (_Component) {
 			});
 
 			return _react2.default.createElement(
-				"section",
+				'section',
 				{ className: classnames },
-				_react2.default.createElement("div", { className: "grid__item grid__item--col-1 grid__item--hide-bp-small" }),
+				_react2.default.createElement('div', { className: 'grid__item grid__item--col-1 grid__item--hide-bp-small' }),
 				_react2.default.createElement(
-					"div",
-					{ className: "grid__item grid__item--col-5" },
+					'div',
+					{ className: 'grid__item grid__item--col-5 grid__item--col-8-small' },
 					_react2.default.createElement(_EditableTitle2.default, null)
 				)
 			);
@@ -22774,16 +22748,10 @@ var ArticleJumbotron = function (_Component) {
 	return ArticleJumbotron;
 }(_react.Component);
 
-ArticleJumbotron.propTypes = {
-	title: _react.PropTypes.string,
-	type: _react.PropTypes.string,
-	data: _react.PropTypes.number,
-	body: _react.PropTypes.string
-};
 exports.default = ArticleJumbotron;
 
-},{"./ArticleButton":204,"./EditableTitle":207,"classnames":2,"react":199,"react-addons-css-transition-group":41}],207:[function(require,module,exports){
-"use strict";
+},{"./ArticleButton":204,"./EditableTitle":207,"classnames":2,"react":199}],207:[function(require,module,exports){
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -22791,19 +22759,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsCssTransitionGroup = require("react-addons-css-transition-group");
-
-var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
-
-var _classnames = require("classnames");
+var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _ArticleButton = require("./ArticleButton");
+var _ArticleButton = require('./ArticleButton');
 
 var _ArticleButton2 = _interopRequireDefault(_ArticleButton);
 
@@ -22824,27 +22788,34 @@ var EditableTitle = function (_Component) {
 		var _this = _possibleConstructorReturn(this, (EditableTitle.__proto__ || Object.getPrototypeOf(EditableTitle)).call(this));
 
 		_this.componentDidMount = function () {
-			// fetch('//endpoint.com')
+
+			// Fetch cached state from Local Storage. TODO replace with backend call.
+			var cache = localStorage.getItem('cachedState');
+
+			if (cache) {
+				var cachedState = JSON.parse(cache);
+
+				_this.setState({
+					titleText: cachedState.editingTitleText,
+					editingTitleText: cachedState.editingTitleText
+				});
+			}
+
+			// How I would RESTfully fetch data from backend
+			// -----------------------------
+			// fetch('//some-endpoint.com')
 			// 	.then(response => {
 			// 		return response.json();
 			// 	})
 			// 	.then(data => {
 			// 		this.setState({ 
+			// 			titleText: titleText,
+			// 			editingTitleText: editingTitleText
 			// 		})
 			// 	})
 			// 	.catch(error => {
 			// 		console.error(error);
 			// 	});
-			var cache = localStorage.getItem('data');
-
-			if (cache) {
-				console.log(cache);
-
-				_this.setState({
-					titleText: JSON.parse(cache).editingTitleText,
-					editingTitleText: JSON.parse(cache).editingTitleText
-				});
-			}
 		};
 
 		_this.handleEditingOnChange = function (event) {
@@ -22874,7 +22845,25 @@ var EditableTitle = function (_Component) {
 				isEditing: false,
 				titleText: _this.state.editingTitleText
 			});
-			localStorage.setItem('data', JSON.stringify(_this.state));
+
+			// Post Data to Local Storage to Persist. TODO replace with backend call.
+			localStorage.setItem('cachedState', JSON.stringify(_this.state));
+
+			// How I would RESTfully post data to a backend
+			// -----------------------------
+			// fetch('//some-endpoint.com', {method: 'post', body: JSON.stringify(this.state)})
+			// 	.then(response => {
+			// 		return response.json();
+			// 	})
+			// 	.then(data => {
+			// 		this.setState({ 
+			// 			titleText: titleText,
+			// 			editingTitleText: editingTitleText
+			// 		})
+			// 	})
+			// 	.catch(error => {
+			// 		console.error(error);
+			// 	});
 		};
 
 		_this.clickCancel = function () {
@@ -22897,10 +22886,8 @@ var EditableTitle = function (_Component) {
 	}
 
 	_createClass(EditableTitle, [{
-		key: "render",
+		key: 'render',
 		value: function render() {
-			var _this2 = this;
-
 			var _state = this.state,
 			    isEditing = _state.isEditing,
 			    titleText = _state.titleText,
@@ -22912,69 +22899,73 @@ var EditableTitle = function (_Component) {
 				'editable-title--is-editing': isEditing
 			});
 
-			var title = this.splitText(titleText).map(function (item, index) {
+			var titleSplit = this.splitText(titleText);
+
+			var title = titleSplit.map(function (item, index) {
 				return _react2.default.createElement(
-					"span",
+					'span',
 					{ key: index },
 					item,
-					index != _this2.splitText(titleText).length - 1 ? ' ' : null
+					index != titleSplit.length - 1 ? ' ' : null
 				);
 			});
 
+			var slugSplit = this.splitText(editingTitleText);
+
 			// the regex below removes punctuation!
-			var slug = this.splitText(editingTitleText).map(function (item, index) {
+			var slug = slugSplit.map(function (item, index) {
 				return _react2.default.createElement(
-					"span",
+					'span',
 					{ key: index },
 					item.toLowerCase().replace(/[.,?\/#!$%\^&\*;:{}=\-_`~()]/g, '').replace(/\s{2,}/g, " "),
-					index != _this2.splitText(editingTitleText).length - 1 ? '-' : ''
+					index != slugSplit.length - 1 ? '-' : ''
 				);
 			});
 
 			return _react2.default.createElement(
-				"div",
+				'div',
 				{ className: classnames },
 				_react2.default.createElement(
-					"div",
-					{ className: "editable-title__controls" },
+					'div',
+					{ className: 'editable-title__controls' },
 					_react2.default.createElement(
 						_ArticleButton2.default,
 						{ onClick: this.toggleIsEditing, hidden: this.state.isEditing },
-						_react2.default.createElement("i", { className: "iconcss icon-pencil iconcss--yellow" })
+						_react2.default.createElement('i', { className: 'iconcss icon-pencil iconcss--yellow' })
 					),
 					_react2.default.createElement(
 						_ArticleButton2.default,
 						{ onClick: this.clickCancel, hidden: !this.state.isEditing },
-						_react2.default.createElement("i", { className: "iconcss icon-close iconcss--red" })
+						_react2.default.createElement('i', { className: 'iconcss icon-close iconcss--red' })
 					),
 					_react2.default.createElement(
 						_ArticleButton2.default,
 						{ onClick: this.clickCheck, hidden: !this.state.isEditing, disabled: this.state.editingTitleText.length == 0 },
-						_react2.default.createElement("i", { className: "iconcss icon-check iconcss--green" })
+						_react2.default.createElement('i', { className: 'iconcss icon-check iconcss--green' })
 					)
 				),
 				_react2.default.createElement(
-					"div",
-					{ className: "editable-title__main" },
+					'div',
+					{ className: 'editable-title__main' },
 					_react2.default.createElement(
-						"h1",
+						'h1',
 						null,
 						title
 					),
 					_react2.default.createElement(
-						"div",
-						{ className: "editable-title__editor" },
-						_react2.default.createElement("input", { ref: "editingTitleText", type: "text", value: editingTitleText, onChange: this.handleEditingOnChange, onKeyPress: this.handleEditingKeyPress }),
+						'div',
+						{ className: 'editable-title__editor' },
+						_react2.default.createElement('input', { ref: 'editingTitleText', type: 'text', value: editingTitleText, onChange: this.handleEditingOnChange, onKeyPress: this.handleEditingKeyPress }),
 						_react2.default.createElement(
-							"div",
-							{ className: "editable-title__slug" },
+							'div',
+							{ className: 'editable-title__slug' },
 							_react2.default.createElement(
-								"h4",
+								'h4',
 								null,
-								"slug: "
+								'slug:'
 							),
 							_react2.default.createElement(
-								"h4",
+								'h4',
 								null,
 								slug
 							)
@@ -22991,6 +22982,6 @@ var EditableTitle = function (_Component) {
 EditableTitle.propTypes = {};
 exports.default = EditableTitle;
 
-},{"./ArticleButton":204,"classnames":2,"react":199,"react-addons-css-transition-group":41}]},{},[201])
+},{"./ArticleButton":204,"classnames":2,"react":199}]},{},[201])
 
 //# sourceMappingURL=main.js.map

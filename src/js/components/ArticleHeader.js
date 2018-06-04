@@ -1,13 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import classNames from "classnames";
 
 export default class ArticleHeader extends Component {
-
-	static propTypes = {
-		charts: PropTypes.array
-	}
 
 	constructor() {
 		super();

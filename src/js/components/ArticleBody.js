@@ -1,20 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import classNames from "classnames";
 
 export default class ArticleBody extends Component {
-
-	static propTypes = {
-		large: PropTypes.bool
-	}
 
 	constructor() {
 		super();
 	}
 
 	render() {
-		const { large } = this.props;	
 
 		const classnames = classNames({
 			'grid': true,
@@ -24,7 +18,7 @@ export default class ArticleBody extends Component {
 		return (
 			<section className={classnames}>
 				<div className="grid__item grid__item--col-1 grid__item--hide-bp-small"></div>
-				<div className="grid__item grid__item--col-2 metadata">
+				<div className="grid__item grid__item--col-2 grid__item--col-8-small metadata">
 					<hr/>
 					<div className="metadata__item">
 						<h4>By</h4>
@@ -32,7 +26,7 @@ export default class ArticleBody extends Component {
 					</div>
 
 					<hr/>
-					<div className="metadata__item">
+					<div className="metadata__item"> 
 						<h4>August 6, 2015</h4>
 					</div>
 
@@ -43,10 +37,13 @@ export default class ArticleBody extends Component {
 						<h4 className="metadata__tag">#fungus</h4>
 					</div>
 				</div>
-				<div className="grid__item grid__item--col-5">
-					<p>
-						Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.
-					</p>
+				<div className="grid__item grid__item--col-5 grid__item--col-8-small">
+					<div className="introduction">
+						<h4>New York, NY.</h4>
+						<p>
+							Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.
+						</p>	
+					</div>
 					<p>
 						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim.
 					</p>
