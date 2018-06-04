@@ -27,20 +27,20 @@ export default class ArticleBody extends Component {
 				<div className="grid__item grid__item--col-2 metadata">
 					<hr/>
 					<div className="metadata__item">
-						<span>By</span>
-						<span className="metadata__author">Bob Law</span>
+						<h4>By</h4>
+						<h4 className="metadata__author">Bob Law</h4>
 					</div>
 
 					<hr/>
 					<div className="metadata__item">
-						<span>August 6, 2015</span>
+						<h4>August 6, 2015</h4>
 					</div>
 
 					<hr/>
 					<div className="metadata__item">
-						<span className="metadata__tag">#environment</span>
-						<span className="metadata__tag">#swift</span>
-						<span className="metadata__tag">#fungus</span>
+						<h4 className="metadata__tag">#environment</h4>
+						<h4 className="metadata__tag">#swift</h4>
+						<h4 className="metadata__tag">#fungus</h4>
 					</div>
 				</div>
 				<div className="grid__item grid__item--col-5">

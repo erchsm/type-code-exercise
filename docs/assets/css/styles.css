@@ -156,15 +156,19 @@ h3 {
   font-weight: 500; }
 
 h4 {
-  font-size: 19px;
-  font-weight: 500;
-  letter-spacing: 0.006em; }
+  font-family: "Futura Std", sans-serif;
+  font-weight: 300;
+  color: #B2B2B2;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  display: inline; }
 
 p {
   color: #333333;
   font-family: "Palantino", serif;
-  font-size: 21px;
-  margin-bottom: 21px;
+  font-size: 19px;
+  margin-bottom: 19px;
   line-height: 1.5;
   font-weight: 400;
   margin-right: 12.5%; }
@@ -178,14 +182,6 @@ hr {
   border: none;
   background-color: #E5E5E5; }
 
-span {
-  font-family: "Futura Std", sans-serif;
-  font-weight: 300;
-  color: #B2B2B2;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 2px; }
-
 blockquote {
   font-family: "Copernicus", sans-serif;
   color: #8A98A6;
@@ -197,11 +193,20 @@ blockquote {
   -ms-transform: translateX(-6.25%);
   transform: translateX(-6.25%); }
 
+input {
+  font-family: "Copernicus", sans-serif;
+  color: #1A1A1A;
+  outline: none;
+  background-color: #F9F9F9;
+  border: solid 1px #CBCBCB;
+  font-size: 42px;
+  width: 100%;
+  padding: 6px 12px; }
+
 * {
   box-sizing: border-box; }
 
 body {
-  background-color: #f7f7f7;
   -webkit-overflow-scrolling: touch; }
 
 @media screen and (max-width: 600px) {
@@ -239,8 +244,41 @@ body {
     color: #6F4F31;
     text-transform: initial;
     margin-left: 6px;
-    font-size: 17px;
+    font-size: 15px;
     letter-spacing: 0.006em; }
+
+.article-button {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  mix-blend-mode: lighten;
+  background-color: black;
+  color: black;
+  font-size: 24px;
+  cursor: pointer; }
+  .article-button .iconcss--yellow:before {
+    background-color: #e3ce0e;
+    box-shadow: -3px -3px 0 6px #e3ce0e; }
+  .article-button .iconcss--green:before {
+    background-color: #85b834;
+    box-shadow: -3px -3px 0 6px #85b834; }
+  .article-button .iconcss--red:before {
+    background-color: #cb4d1b;
+    box-shadow: -3px -3px 0 6px #cb4d1b; }
+  .article-button--disabled {
+    cursor: auto; }
+    .article-button--disabled .iconcss:before {
+      background-color: #333333;
+      box-shadow: -3px -3px 0 6px #333333; }
+  .article-button--hidden {
+    display: none; }
 
 .article-header {
   position: fixed;
@@ -258,17 +296,79 @@ body {
   .article-header .iconcss {
     font-size: 15px; }
   .article-header .icon-logo {
-    color: #FFFFFF;
+    color: #F9F9F9;
     margin-right: 18px; }
   .article-header .icon-hamburger {
     color: #9F9B86; }
 
 .article-jumbotron {
-  min-height: 800px;
+  height: 90vh;
+  min-height: 90vh;
+  max-height: 90vh;
   background-image: url("../img/forest.jpg");
   background-size: cover;
+  background-position: bottom;
   -ms-flex-align: end;
   align-items: flex-end; }
+
+.editable-title {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-left: -34px;
+  height: 219px; }
+  .editable-title__controls {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .editable-title__main {
+    margin-left: 30px;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  .editable-title__editor {
+    display: none;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: white;
+    padding: 12px; }
+  .editable-title__slug {
+    margin: 12px 0 0 12px; }
+    .editable-title__slug h4 {
+      display: inline;
+      font-family: "Futura Std", sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      text-transform: lowercase;
+      color: #B2B2B2; }
+      .editable-title__slug h4 ~ h4 {
+        color: #666666; }
+  .editable-title h1 span {
+    background-color: white;
+    color: black;
+    line-height: 1.1em;
+    mix-blend-mode: screen; }
+    .editable-title h1 span::-moz-selection {
+      background-color: white;
+      color: black; }
+    .editable-title h1 span::selection {
+      background-color: white;
+      color: black; }
+  .editable-title--is-editing .article-button:last-child {
+    margin-top: 1px; }
+  .editable-title--is-editing .editable-title__editor {
+    display: -ms-flexbox;
+    display: flex; }
+  .editable-title--is-editing h1 {
+    display: none; }
 
 .video-container {
   z-index: 2; }

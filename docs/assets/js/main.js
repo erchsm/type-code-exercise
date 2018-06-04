@@ -22406,7 +22406,7 @@ var App = function (_Component) {
 App.propTypes = {};
 exports.default = App;
 
-},{"./ArticleBody":203,"./ArticleHeader":204,"./ArticleJumbotron":205,"react":199}],203:[function(require,module,exports){
+},{"./ArticleBody":203,"./ArticleHeader":205,"./ArticleJumbotron":206,"react":199}],203:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -22467,12 +22467,12 @@ var ArticleBody = function (_Component) {
 						"div",
 						{ className: "metadata__item" },
 						_react2.default.createElement(
-							"span",
+							"h4",
 							null,
 							"By"
 						),
 						_react2.default.createElement(
-							"span",
+							"h4",
 							{ className: "metadata__author" },
 							"Bob Law"
 						)
@@ -22482,7 +22482,7 @@ var ArticleBody = function (_Component) {
 						"div",
 						{ className: "metadata__item" },
 						_react2.default.createElement(
-							"span",
+							"h4",
 							null,
 							"August 6, 2015"
 						)
@@ -22492,17 +22492,17 @@ var ArticleBody = function (_Component) {
 						"div",
 						{ className: "metadata__item" },
 						_react2.default.createElement(
-							"span",
+							"h4",
 							{ className: "metadata__tag" },
 							"#environment"
 						),
 						_react2.default.createElement(
-							"span",
+							"h4",
 							{ className: "metadata__tag" },
 							"#swift"
 						),
 						_react2.default.createElement(
-							"span",
+							"h4",
 							{ className: "metadata__tag" },
 							"#fungus"
 						)
@@ -22578,6 +22578,74 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var ArticleButton = function (_Component) {
+	_inherits(ArticleButton, _Component);
+
+	function ArticleButton() {
+		_classCallCheck(this, ArticleButton);
+
+		return _possibleConstructorReturn(this, (ArticleButton.__proto__ || Object.getPrototypeOf(ArticleButton)).call(this));
+	}
+
+	_createClass(ArticleButton, [{
+		key: "render",
+		value: function render() {
+			var _props = this.props,
+			    children = _props.children,
+			    disabled = _props.disabled,
+			    hidden = _props.hidden,
+			    onClick = _props.onClick;
+
+
+			var classnames = (0, _classnames2.default)({
+				'article-button': true,
+				'article-button--disabled': disabled,
+				'article-button--hidden': hidden
+			});
+
+			return _react2.default.createElement(
+				"div",
+				{ className: classnames, onClick: onClick },
+				children
+			);
+		}
+	}]);
+
+	return ArticleButton;
+}(_react.Component);
+
+ArticleButton.propTypes = {};
+exports.default = ArticleButton;
+
+},{"classnames":2,"react":199,"react-addons-css-transition-group":41}],205:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactAddonsCssTransitionGroup = require("react-addons-css-transition-group");
+
+var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+
+var _classnames = require("classnames");
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 var ArticleHeader = function (_Component) {
 	_inherits(ArticleHeader, _Component);
 
@@ -22619,7 +22687,7 @@ ArticleHeader.propTypes = {
 };
 exports.default = ArticleHeader;
 
-},{"classnames":2,"react":199,"react-addons-css-transition-group":41}],205:[function(require,module,exports){
+},{"classnames":2,"react":199,"react-addons-css-transition-group":41}],206:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -22639,6 +22707,14 @@ var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTran
 var _classnames = require("classnames");
 
 var _classnames2 = _interopRequireDefault(_classnames);
+
+var _ArticleButton = require("./ArticleButton");
+
+var _ArticleButton2 = _interopRequireDefault(_ArticleButton);
+
+var _EditableTitle = require("./EditableTitle");
+
+var _EditableTitle2 = _interopRequireDefault(_EditableTitle);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22677,13 +22753,6 @@ var ArticleJumbotron = function (_Component) {
 	_createClass(ArticleJumbotron, [{
 		key: "render",
 		value: function render() {
-			var _props = this.props,
-			    title = _props.title,
-			    type = _props.type,
-			    data = _props.data,
-			    body = _props.body;
-
-
 			var classnames = (0, _classnames2.default)({
 				'grid': true,
 				'article-jumbotron': true
@@ -22696,11 +22765,7 @@ var ArticleJumbotron = function (_Component) {
 				_react2.default.createElement(
 					"div",
 					{ className: "grid__item grid__item--col-5" },
-					_react2.default.createElement(
-						"h1",
-						null,
-						"Are we out of the woods yet?"
-					)
+					_react2.default.createElement(_EditableTitle2.default, null)
 				)
 			);
 		}
@@ -22717,6 +22782,215 @@ ArticleJumbotron.propTypes = {
 };
 exports.default = ArticleJumbotron;
 
-},{"classnames":2,"react":199,"react-addons-css-transition-group":41}]},{},[201])
+},{"./ArticleButton":204,"./EditableTitle":207,"classnames":2,"react":199,"react-addons-css-transition-group":41}],207:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactAddonsCssTransitionGroup = require("react-addons-css-transition-group");
+
+var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+
+var _classnames = require("classnames");
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _ArticleButton = require("./ArticleButton");
+
+var _ArticleButton2 = _interopRequireDefault(_ArticleButton);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var EditableTitle = function (_Component) {
+	_inherits(EditableTitle, _Component);
+
+	function EditableTitle() {
+		_classCallCheck(this, EditableTitle);
+
+		var _this = _possibleConstructorReturn(this, (EditableTitle.__proto__ || Object.getPrototypeOf(EditableTitle)).call(this));
+
+		_this.componentDidMount = function () {
+			// fetch('//endpoint.com')
+			// 	.then(response => {
+			// 		return response.json();
+			// 	})
+			// 	.then(data => {
+			// 		this.setState({ 
+			// 		})
+			// 	})
+			// 	.catch(error => {
+			// 		console.error(error);
+			// 	});
+			var cache = localStorage.getItem('data');
+
+			if (cache) {
+				console.log(cache);
+
+				_this.setState({
+					titleText: JSON.parse(cache).editingTitleText,
+					editingTitleText: JSON.parse(cache).editingTitleText
+				});
+			}
+		};
+
+		_this.handleEditingOnChange = function (event) {
+			_this.setState({
+				editingTitleText: event.target.value
+			});
+		};
+
+		_this.toggleIsEditing = function () {
+			_this.setState({
+				isEditing: !_this.state.isEditing
+			});
+			setTimeout(function () {
+				_this.refs.editingTitleText.focus();
+				_this.refs.editingTitleText.setSelectionRange(_this.state.editingTitleText.length, _this.state.editingTitleText.length);
+			}, 0);
+		};
+
+		_this.handleEditingKeyPress = function (event) {
+			if (event.charCode == 13 && _this.state.editingTitleText.length > 0) {
+				_this.clickCheck();
+			}
+		};
+
+		_this.clickCheck = function () {
+			_this.setState({
+				isEditing: false,
+				titleText: _this.state.editingTitleText
+			});
+			localStorage.setItem('data', JSON.stringify(_this.state));
+		};
+
+		_this.clickCancel = function () {
+			_this.setState({
+				isEditing: false,
+				editingTitleText: _this.state.titleText
+			});
+		};
+
+		_this.splitText = function (text) {
+			return text.split(' ');
+		};
+
+		_this.state = {
+			isEditing: false,
+			titleText: 'Are we out of the woods yet?',
+			editingTitleText: 'Are we out of the woods yet?'
+		};
+		return _this;
+	}
+
+	_createClass(EditableTitle, [{
+		key: "render",
+		value: function render() {
+			var _this2 = this;
+
+			var _state = this.state,
+			    isEditing = _state.isEditing,
+			    titleText = _state.titleText,
+			    editingTitleText = _state.editingTitleText;
+
+
+			var classnames = (0, _classnames2.default)({
+				'editable-title': true,
+				'editable-title--is-editing': isEditing
+			});
+
+			var title = this.splitText(titleText).map(function (item, index) {
+				return _react2.default.createElement(
+					"span",
+					{ key: index },
+					item,
+					index != _this2.splitText(titleText).length - 1 ? ' ' : null
+				);
+			});
+
+			// the regex below removes punctuation!
+			var slug = this.splitText(editingTitleText).map(function (item, index) {
+				return _react2.default.createElement(
+					"span",
+					{ key: index },
+					item.toLowerCase().replace(/[.,?\/#!$%\^&\*;:{}=\-_`~()]/g, '').replace(/\s{2,}/g, " "),
+					index != _this2.splitText(editingTitleText).length - 1 ? '-' : ''
+				);
+			});
+
+			return _react2.default.createElement(
+				"div",
+				{ className: classnames },
+				_react2.default.createElement(
+					"div",
+					{ className: "editable-title__controls" },
+					_react2.default.createElement(
+						_ArticleButton2.default,
+						{ onClick: this.toggleIsEditing, hidden: this.state.isEditing },
+						_react2.default.createElement("i", { className: "iconcss icon-pencil iconcss--yellow" })
+					),
+					_react2.default.createElement(
+						_ArticleButton2.default,
+						{ onClick: this.clickCancel, hidden: !this.state.isEditing },
+						_react2.default.createElement("i", { className: "iconcss icon-close iconcss--red" })
+					),
+					_react2.default.createElement(
+						_ArticleButton2.default,
+						{ onClick: this.clickCheck, hidden: !this.state.isEditing, disabled: this.state.editingTitleText.length == 0 },
+						_react2.default.createElement("i", { className: "iconcss icon-check iconcss--green" })
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "editable-title__main" },
+					_react2.default.createElement(
+						"h1",
+						null,
+						title
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "editable-title__editor" },
+						_react2.default.createElement("input", { ref: "editingTitleText", type: "text", value: editingTitleText, onChange: this.handleEditingOnChange, onKeyPress: this.handleEditingKeyPress }),
+						_react2.default.createElement(
+							"div",
+							{ className: "editable-title__slug" },
+							_react2.default.createElement(
+								"h4",
+								null,
+								"slug: "
+							),
+							_react2.default.createElement(
+								"h4",
+								null,
+								slug
+							)
+						)
+					)
+				)
+			);
+		}
+	}]);
+
+	return EditableTitle;
+}(_react.Component);
+
+EditableTitle.propTypes = {};
+exports.default = EditableTitle;
+
+},{"./ArticleButton":204,"classnames":2,"react":199,"react-addons-css-transition-group":41}]},{},[201])
 
 //# sourceMappingURL=main.js.map

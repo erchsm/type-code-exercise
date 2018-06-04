@@ -1,6 +1,9 @@
 .article-jumbotron {
-	min-height: 800px;
+	height: 90vh;
+	min-height: 90vh;
+	max-height: 90vh;
 	background-image: url('../img/forest.jpg');
 	background-size: cover;
+	background-position: bottom;
 	align-items: flex-end;
 }

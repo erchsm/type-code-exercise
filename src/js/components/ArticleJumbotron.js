@@ -3,6 +3,9 @@ import React, { Component, PropTypes } from 'react';
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import classNames from "classnames";
 
+import ArticleButton from './ArticleButton';
+import EditableTitle from './EditableTitle';
+
 export default class ArticleJumbotron extends Component {
 
 	static propTypes = {
@@ -34,8 +37,6 @@ export default class ArticleJumbotron extends Component {
 	}
 
 	render() {
-		const { title, type, data, body } = this.props;	
-
 		const classnames = classNames({
 			'grid': true,
 			'article-jumbotron': true
@@ -45,7 +46,7 @@ export default class ArticleJumbotron extends Component {
 			<section className={classnames}>
 				<div className="grid__item grid__item--col-1 grid__item--hide-bp-small"></div>
 				<div className="grid__item grid__item--col-5">
-					<h1>Are we out of the woods yet?</h1>
+					<EditableTitle/>
 				</div>
 			</section>
 		)
