@@ -14,8 +14,9 @@
 @import 'grid.scss';
 @import 'typography.scss';
 @import 'common.scss';
-@import 'screen.scss';
-
 
 /* Modules */
 @import 'modules/*';
+
+/* Responsive */
+@import 'screen.scss';
